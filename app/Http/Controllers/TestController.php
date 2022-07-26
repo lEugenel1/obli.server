@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ContractCreditLine;
+use App\Models\ContractMainAll;
+use App\Models\ContractRelationAll;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 class TestController extends Controller
@@ -11,14 +14,11 @@ class TestController extends Controller
         $response = Http::post(env('API_URL').'bankIsrael/creaditLineAll');
         if($response->json()['data']['Count of created records']!=0){
             for($i=0;$i<$response->json()['data']['Count of created records'];$i++){
-                dd($response['data']['response'][$i]);
+                ContractCreditLine::create($response['data']['response'][$i]);
             }
-//            foreach ($response['data']['response'] as $key=>$value){
-//                dd($key,$value);
-//            }
-//            dd($response['data']['response']);
+            return response()->json("Success");
         }
-        dd(123);
+        return response()->json("No records");
     }
 
     public function storeCustomerRelationAll()
@@ -26,9 +26,11 @@ class TestController extends Controller
         $response = Http::post(env('API_URL').'bankIsrael/customerRelationAll');
         if($response->json()['data']['Count of created records']!=0){
             for($i=0;$i<$response->json()['data']['Count of created records'];$i++){
-                dd($response['data']['response'][$i]);
+                ContractRelationAll::create($response['data']['response'][$i]);
             }
+            return response()->json("Success");
         }
+        return response()->json("No records");
     }
 
     public function storeContractMainAll()
@@ -36,8 +38,10 @@ class TestController extends Controller
         $response = Http::post(env('API_URL').'bankIsrael/contractMainAll');
         if($response->json()['data']['Count of created records']!=0){
             for($i=0;$i<$response->json()['data']['Count of created records'];$i++){
-                dd($response['data']['response'][$i]);
+                ContractMainAll::create($response['data']['response'][$i]);
             }
+            return response()->json("Success");
         }
+        return response()->json("No records");
     }
 }
