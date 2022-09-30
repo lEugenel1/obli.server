@@ -1,11 +1,9 @@
 version: '2'
 services:
     php-apache-dev:
-        image: webdevops/php-apache-dev
+        image: webdevops/php-apache-dev:7.4-alpine
         ports:
             - '82:80'
-        links:
-            - 'mariadb:db'
         environment:
             - WEB_DOCUMENT_ROOT=/app/public
         volumes:
