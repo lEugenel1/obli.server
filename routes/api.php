@@ -20,3 +20,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('test', [\App\Http\Controllers\TestController::class, 'storeCreaditLineAll']);
 Route::get('test2', [\App\Http\Controllers\TestController::class, 'storeCustomerRelationAll']);
 Route::get('test3', [\App\Http\Controllers\TestController::class, 'storeContractMainAll']);
+Route::get('test-DB', [\App\Http\Controllers\TestController::class, 'testConnection']);

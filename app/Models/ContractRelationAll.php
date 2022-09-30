@@ -9,7 +9,7 @@ class ContractRelationAll extends Model
 {
     use HasFactory;
 
-    protected $table = 'tbl_src_contract_customer_relation_all';
+    protected $table = 'TBL_SRC_Contract_customer_Relation_All';
 
     protected $fillable = ['Value_Date', 'Loading_TimeStamp', 'Record_Type', 'Management_Unit_ID', 'Branch_ID',
         'Contract_Ref_ID', 'Contract_Reference', 'Customer_Update_Indicator_Fixed', 'Customer_Relation_Type_Fixed',

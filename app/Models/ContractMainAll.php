@@ -9,7 +9,7 @@ class ContractMainAll extends Model
 {
     use HasFactory;
 
-    protected $table = 'tbl_src_contract_main_all';
+    protected $table = 'TBL_SRC_Contract_Main_All';
 
     protected $fillable = ['Value_Date', 'Loading_TimeStamp', 'Record_Type', 'Management_Unit_ID', 'Branch_ID',
         'Contract_Ref_ID', 'Contract_Reference', 'Contract_Event_Indicator_Fixed', 'Previous_Contract_Ref_ID',

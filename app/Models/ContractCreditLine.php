@@ -9,7 +9,7 @@ class ContractCreditLine extends Model
 {
     use HasFactory;
 
-    protected $table = 'tbl_src_contract_credit_line_all';
+    protected $table = 'TBL_SRC_Contract_Credit_Line_All';
 
     protected $fillable = ['Value_Date', 'Loading_TimeStamp', 'Record_Type', 'Management_Unit_ID', 'Branch_ID',
         'Contract_Ref_ID', 'Contract_Reference', 'Credit_Limit_Amount', 'Credit_Limit_Usage_Amount',

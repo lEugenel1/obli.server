@@ -7,6 +7,8 @@ use App\Models\ContractMainAll;
 use App\Models\ContractRelationAll;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\DB;
+
 class TestController extends Controller
 {
     public function storeCreaditLineAll()
@@ -43,5 +45,14 @@ class TestController extends Controller
             return response()->json("Success");
         }
         return response()->json("No records");
+    }
+
+    public function testConnection()
+    {
+        try {
+            DB::connection()->getPdo();
+        } catch (\Exception $e) {
+            die("Could not connect to the database.  Please check your configuration. error:" . $e );
+        }
     }
 }
