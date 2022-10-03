@@ -4,8 +4,6 @@ WORKDIR /app
 
 COPY . .
 
-RUN cp .env.example .env
-
 RUN composer install && \
     php artisan key:generate && \
     php artisan storage:link
