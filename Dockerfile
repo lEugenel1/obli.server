@@ -4,11 +4,9 @@ WORKDIR /app
 
 COPY . .
 
-COPY .env.example .env
+RUN cp .env.example .env
 
-RUN apk update && \
-    apk add && \
-    composer install && \
+RUN composer install && \
     php artisan key:generate && \
     php artisan storage:link
 
