@@ -49,7 +49,8 @@ class TestController extends Controller
 
     public function testConnection()
     {
-        dd(ContractCreditLine::all());
+        echo phpinfo();
+//        dd(ContractCreditLine::all());
 //        try {
 //            DB::connection()->getPdo();
 //        } catch (\Exception $e) {
