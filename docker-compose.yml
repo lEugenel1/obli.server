@@ -1,7 +1,7 @@
 version: '2'
 services:
     php-apache-dev:
-        image: webdevops/php-apache-dev:7.4-alpine
+        build: .
         ports:
             - '82:80'
         environment:
