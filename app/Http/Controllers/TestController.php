@@ -49,10 +49,11 @@ class TestController extends Controller
 
     public function testConnection()
     {
-        try {
-            DB::connection()->getPdo();
-        } catch (\Exception $e) {
-            die("Could not connect to the database.  Please check your configuration. error:" . $e );
-        }
+        dd(ContractCreditLine::all());
+//        try {
+//            DB::connection()->getPdo();
+//        } catch (\Exception $e) {
+//            die("Could not connect to the database.  Please check your configuration. error:" . $e );
+//        }
     }
 }
