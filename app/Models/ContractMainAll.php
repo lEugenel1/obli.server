@@ -20,4 +20,8 @@ class ContractMainAll extends Model
         'Adjusted_Rate_percent_SRC', 'Additional_Identification_Num', 'Additional_contract_Num',
         'Sub_Management_Unit_ID', 'Source_System_Code', 'Data_Process_Type', 'Partition_ID', 'work_flow_source',
         'Active_Flag'];
+
+    public $timestamps = false;
+
+    public $incrementing = false;
 }

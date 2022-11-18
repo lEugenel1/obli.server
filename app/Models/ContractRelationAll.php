@@ -21,4 +21,8 @@ class ContractRelationAll extends Model
         'Date_Of_Death', 'Sub_Management_Unit_ID', 'Source_System_Code', 'Data_Process_Type', 'Date_Customer_Agreement',
         'Agreement_Number', 'New_First_Name', 'New_Last_Name', 'Partition_ID', 'Latin_First_Name', 'Latin_Last_Name',
         'Entity_ID', 'Identification_Document_Type', 'work_flow_source', 'Active_Flag'];
+
+    public $timestamps = false;
+
+    public $incrementing = false;
 }

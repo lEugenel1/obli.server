@@ -19,4 +19,8 @@ class ContractCreditLine extends Model
         'Linked_Customers_All_Types_Fixed', 'Linked_Customers_Reported_Types_Only_Fixed', 'Sub_Management_Unit_ID',
         'Source_System_Code', 'Data_Process_Type', 'Partition_ID', 'work_flow_source', 'Active_Flag'];
 
+    public $timestamps=false;
+
+    public $incrementing=false;
+
 }
